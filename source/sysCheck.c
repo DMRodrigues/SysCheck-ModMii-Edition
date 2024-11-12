@@ -1045,9 +1045,9 @@ int main(int argc, char **argv)
 	if (arguments.USB)
 	{
 		printLoading(MSG_MountUSB);
-		USB_Deinitialize();
 		if (SystemInfo.runningIOS != IOS_GetVersion())
 		{
+			USB_Deinitialize();
 			IosPatch_AHBPROT(false);
 			IOS_ReloadIOS(SystemInfo.runningIOS);
 		}

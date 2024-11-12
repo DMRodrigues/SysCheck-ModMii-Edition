@@ -134,6 +134,8 @@ float GetSysMenuNintendoVersion(u32 sysVersion)
 		case 608:
 		case 609:
 		case 610:
+		case 4609:
+		case 4610:
 			ninVersion = 4.3f;
 			break;
 	}
@@ -159,6 +161,7 @@ char GetSysMenuRegion(u32 sysVersion) {
 		case 513: //4.3U
 		case 545:
 		case 609:
+		case 4609:
 			return 'U';
 			break;
 		case 130: //2.0E
@@ -176,6 +179,7 @@ char GetSysMenuRegion(u32 sysVersion) {
 		case 514: //4.3E
 		case 546:
 		case 610:
+		case 4610:
 			return 'E';
 			break;
 		case 128: //2.0J

@@ -27,6 +27,7 @@ typedef struct {
 extern arguments_t arguments;
 
 void logfile(const char *format, ...);
+void logfileUSB(const char *format, ...);
 void *allocate_memory(u32 size);
 int NandStartup(void);
 void NandShutdown(void);

@@ -47,6 +47,20 @@ void logfile(const char *format, ...)
 	UnmountSD();
 }
 
+void logfileUSB(const char *format, ...)
+{
+	//if (!arguments.debug) return;
+	MountUSB();
+	FILE *f;
+	f= fopen("usb:/SysCheckDebug.log", "a");
+	if(f == NULL) return;
+	va_list args;
+	va_start(args, format);
+	vfprintf(f,format, args);
+	va_end (args);
+	UnmountUSB();
+}
+
 /**
 * A simple structure to keep track of the size of a malloc()ated block of memory
 */
